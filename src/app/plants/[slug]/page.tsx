@@ -4,7 +4,7 @@ import { getPlantById } from "@/actions/plant.action";
 import { stackServerApp } from "@/stack";
 import { SignIn } from "@stackframe/stack";
 
-export async function generateMetaData({
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
@@ -18,7 +18,7 @@ export async function generateMetaData({
   };
 }
 
-const page = async ({ params }: { params: { slug: string } }) => {
+const Page = async ({ params }: { params: { slug: string } }) => {
   const user = await stackServerApp.getUser();
   const [id] = params.slug.split("--");
 
@@ -35,4 +35,4 @@ const page = async ({ params }: { params: { slug: string } }) => {
     );
 };
 
-export default page;
+export default Page;

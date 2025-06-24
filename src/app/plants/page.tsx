@@ -3,7 +3,7 @@ import InventoryTable from "@/components/InventoryTable";
 import { stackServerApp } from "@/stack";
 import { SignUp } from "@stackframe/stack";
 
-const page = async () => {
+const Page = async () => {
   const user = await stackServerApp.getUser();
   const plant = await getPlants();
   return (
@@ -23,4 +23,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;
