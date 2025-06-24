@@ -1,13 +1,10 @@
 import { getPlants } from "@/actions/plant.action";
-import { getUserDetails } from "@/actions/user.action";
 import InventoryTable from "@/components/InventoryTable";
 import { stackServerApp } from "@/stack";
-import { SignIn, SignUp } from "@stackframe/stack";
-import React from "react";
+import { SignUp } from "@stackframe/stack";
 
 const page = async () => {
   const user = await stackServerApp.getUser();
-  const app = stackServerApp.urls;
   const plant = await getPlants();
   return (
     <>
